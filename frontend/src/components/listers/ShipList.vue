@@ -109,7 +109,7 @@
             this.newValue = {
                 'orderId': '',
                 'orderStatus': '',
-                'itemId': [],
+                'itemId': '',
                 'address': '',
                 'email': '',
                 'qty': 0,

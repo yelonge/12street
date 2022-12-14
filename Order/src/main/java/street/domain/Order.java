@@ -21,12 +21,6 @@ public class Order  {
     
     
     
-    private String orderId;
-    
-    
-    
-    
-    
     private String orderStatus;
     
     
@@ -74,6 +68,8 @@ public class Order  {
 
 
 
+    public void 취소(){
+    }
 
 
 

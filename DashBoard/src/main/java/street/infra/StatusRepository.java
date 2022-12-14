@@ -8,7 +8,9 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel="statuses", path="statuses")
 public interface StatusRepository extends PagingAndSortingRepository<Status, Long> {
 
-    
+    List<Status> findByItemId(String itemId);
+List<Status> findByOrderId(String orderId);
+
 
     
 }

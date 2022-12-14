@@ -9,7 +9,6 @@ import java.util.*;
 public class Ordered extends AbstractEvent {
 
     private Long id;
-    private String orderId;
     private String orderStatus;
     private Object itemId;
     private String address;

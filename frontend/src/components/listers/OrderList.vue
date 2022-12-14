@@ -14,11 +14,9 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
-                            [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderStatus :  {{data.orderStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ItemId :  {{data.itemId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -105,7 +103,6 @@
             this.values = temp.data._embedded.orders;
             
             this.newValue = {
-                'orderId': '',
                 'orderStatus': '',
                 'itemId': [],
                 'address': '',

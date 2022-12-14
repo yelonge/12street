@@ -14,6 +14,11 @@ public class Status {
         @Id
         //@GeneratedValue(strategy=GenerationType.AUTO)
         private Long id;
+        private String orderId;
+        private Integer qty;
+        private String itemId;
+        private String curStatus;
+        private String curStatus;
 
 
 }

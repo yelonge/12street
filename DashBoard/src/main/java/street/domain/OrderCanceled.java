@@ -1,19 +1,17 @@
 package street.domain;
 
-import street.domain.*;
 import street.infra.AbstractEvent;
-import lombok.*;
+import lombok.Data;
 import java.util.*;
+
+
 @Data
-@ToString
-public class Ordered extends AbstractEvent {
+public class OrderCanceled extends AbstractEvent {
 
     private Long id;
-    private String orderStatus;
-    private Object itemId;
+    private String order_status;
+    private List<String> itemId;
     private String address;
     private String email;
     private Integer qty;
 }
-
-

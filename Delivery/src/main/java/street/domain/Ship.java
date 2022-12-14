@@ -40,9 +40,9 @@ public class Ship  {
     
     
     
-    @ElementCollection
     
-    private List<String> itemId;
+    
+    private ItemId itemId;
     
     
     

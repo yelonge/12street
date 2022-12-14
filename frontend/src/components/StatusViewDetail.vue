@@ -6,6 +6,21 @@
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <String label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="Qty" v-model="item.qty" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="ItemId" v-model="item.itemId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="CurStatus" v-model="item.curStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="CurStatus" v-model="item.curStatus" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
     </v-card>
 

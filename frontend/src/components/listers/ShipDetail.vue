@@ -11,7 +11,7 @@
             <div>
                 <String label="OrderStatus" v-model="item.orderStatus" :editMode="editMode" @change="change" />
             </div>
-            <StringManager offline label="ItemId" v-model="item.itemId" :editMode="false" @change="change" />
+            <ItemId offline label="ItemId" v-model="item.itemId" :editMode="false" :key="false" @change="change" />
             <div>
                 <String label="Address" v-model="item.address" :editMode="editMode" @change="change" />
             </div>

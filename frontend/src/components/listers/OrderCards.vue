@@ -68,7 +68,6 @@
             me.values = temp.data._embedded.orders;
             
             me.newValue = {
-                'orderId': '',
                 'orderStatus': '',
                 'itemId': [],
                 'address': '',

@@ -22,5 +22,23 @@ public class OrderController {
 
 
 
+    @RequestMapping(value = "orders/{id}/취소",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8")
+    public Order 취소(@PathVariable(value = "id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
+            System.out.println("##### /order/취소  called #####");
+            Optional<Order> optionalOrder = orderRepository.findById(id);
+            
+            optionalOrder.orElseThrow(()-> new Exception("No Entity Found"));
+            Order order = optionalOrder.get();
+            order.취소();
+            
+            orderRepository.save(order);
+            return order;
+            
+    }
+    
+
+
 
 }

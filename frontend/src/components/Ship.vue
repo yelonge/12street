@@ -19,7 +19,7 @@
         <v-card-text>
             <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
             <String label="OrderStatus" v-model="value.orderStatus" :editMode="editMode"/>
-            <String label="ItemId" v-model="value.itemId" :editMode="editMode"/>
+            <ItemId offline label="ItemId" v-model="value.itemId" :editMode="editMode" @change="change"/>
             <String label="Address" v-model="value.address" :editMode="editMode"/>
             <String label="Email" v-model="value.email" :editMode="editMode"/>
             <Number label="Qty" v-model="value.qty" :editMode="editMode"/>

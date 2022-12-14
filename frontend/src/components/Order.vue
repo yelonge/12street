@@ -17,7 +17,6 @@
         </v-card-title >
 
         <v-card-text>
-            <String label="OrderId" v-model="value.orderId" :editMode="editMode"/>
             <String label="OrderStatus" v-model="value.orderStatus" :editMode="editMode"/>
             <String label="ItemId" v-model="value.itemId" :editMode="editMode"/>
             <String label="Address" v-model="value.address" :editMode="editMode"/>
@@ -42,7 +41,6 @@
                     v-else
             >
                 주문
-                취소
             </v-btn>
             <v-btn
                     color="deep-purple lighten-2"
@@ -63,6 +61,14 @@
         </v-card-actions>
         <v-card-actions>
             <v-spacer></v-spacer>
+            <v-btn
+                    v-if="!editMode"
+                    color="deep-purple lighten-2"
+                    text
+                    @click="취소"
+            >
+                취소
+            </v-btn>
         </v-card-actions>
 
         <v-snackbar
@@ -193,6 +199,25 @@
             },
             change(){
                 this.$emit('input', this.value);
+            },
+            async 취소() {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links['취소'].href))
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
             },
         },
     }

@@ -66,7 +66,6 @@
             values: [],
             headers: 
                 [
-                    { text: "orderId", value: "orderId" },
                     { text: "orderStatus", value: "orderStatus" },
                     { text: "itemId", value: "itemId" },
                     { text: "address", value: "address" },
@@ -89,7 +88,6 @@
             this.values = temp.data._embedded.orders;
 
             this.newValue = {
-                'orderId': '',
                 'orderStatus': '',
                 'itemId': [],
                 'address': '',
